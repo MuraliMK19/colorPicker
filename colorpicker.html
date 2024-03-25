@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        input {
+            width: 20em;
+
+        }
+
+        #colorDisplay {
+            margin-top: 20px;
+            border: 1px solid #000;
+            justify-content: center;
+            font-size: 3em;
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>COLOR PICKER</h1>
+    <h3>Choose the color:</h3>
+    <input type="color" id="colorPicker">
+    <div id="colorDisplay" style="width: 300px; height: 300px; border-radius: 10px;"></div>
+    <script>
+        document.getElementById('colorPicker').addEventListener('input', function () {
+            document.getElementById('colorDisplay').style.backgroundColor = this.value;
+            document.getElementById('colorDisplay').innerHTML = this.value;
+        });
+    </script>
+</body>
+
+</html>
